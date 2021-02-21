@@ -1,7 +1,6 @@
 #! -*- coding:utf-8 -*-
 import os
 import csv
-import codecs
 import argparse
 
 parser = argparse.ArgumentParser(description='Process some integers.')
@@ -20,7 +19,7 @@ with open(args.template) as target:
   targetText = target.read()
 
 # get source csv as [list]
-with codecs.open(args.source, encoding='utf-8') as sourceCsv:
+with open(args.source, encoding='utf-8') as sourceCsv:
   reader = csv.reader(sourceCsv)
   csvList = [row for row in reader]
 
