@@ -9,15 +9,15 @@ python3 generate.py
 ### options  
 - template html file path  
 ```
---template [html path]
+python3 generate.py --template [html path]
 ```  
   
 - source csv file path  
 ```
---source [csv path]  
+python3 generate.py --source [csv path]  
 ```
   
 - output directory path  
 ```
---output [directory path]  
+python3 generate.py --output [directory path]  
 ```
