@@ -31,9 +31,11 @@ contentLength = len(contentList)
 
 for (index, List) in enumerate(contentList):
   outputText = targetText
-  outputFilePath = args.outputDir + '/' + str(index) + '.html'
+  if elementList[0] == 'filename':
+    outputFilePath = args.outputDir + '/' + str(List[0]) + '.html'
+  else:
+    outputFilePath = args.outputDir + '/' + str(index) + '.html'
   with open(outputFilePath, mode='w') as outputFile:
-    # log('outputText', outputText)
     for num in range(elementLength):
       replaceTarget = '{%' + elementList[num] + '%}'
       outputText = outputText.replace(replaceTarget, List[num])
